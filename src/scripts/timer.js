@@ -25,7 +25,7 @@ function checkTimeLimit() {
 
   if (remainingTime <= 0 ) {
     clearInterval(timerInterval); // stop countdown
-    window.location.href = "results.html";
+ //   window.location.href = "results.html";
   }
 }
 

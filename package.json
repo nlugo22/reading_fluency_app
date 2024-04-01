@@ -1,0 +1,14 @@
+{
+  "name": "reading_fluency_app",
+  "version": "1.0.0",
+  "description": "An app to pracitce reading fluency for elementary school students.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicholas Lugo",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
