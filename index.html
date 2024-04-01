@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluency Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  
+  <!-- HTML BODY -->
+  <body>
+    <!-- Displaying passage -->
+    <div class="passages" id="passageContainer">
+      <div id="passage">Passages displayed here.</div>
+      <div id="wordChoices"></div>
+    </div>
+  
+    <!-- Count-Down Timer -->
+    <div class="timer"">
+      <p>Timer: <span id="timer">Time Left</span></p>
+    </div>
+
+    <!-- Display results -->
+    <div id="resultContainer" style="display: none">
+      <h2>Results</h2>
+      <p>Accuracy: <span id="accuracy"></span>%</p>
+      <p>Words Per Minute (WPM): <span id="wpm"></span></p>
+    </div>
+
+
+    <!-- Link to Javascript files -->
+    <script src="passages.js"></script>
+    <script src="timer.js"></script>
+  </body>
+</html>
