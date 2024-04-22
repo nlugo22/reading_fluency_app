@@ -1,34 +1,40 @@
-// time limit defined in miliseconds
-const timeLimit = 10 * 1000; // 1 minute
-
-// Start timer when page is loaded
-const startTime = Date.now();
-
-// gran the element that displays the time
+// getting DOM elements
 const time = document.getElementById("timer");
+const result = document.getElementById('resultContainer');
+
+// set up how long count-down lasts
+const seconds = 10;
+const startTime = Date.now();
+const timeLimit = 1000 * seconds;
+
+// update the display time every second
+const timerInterval = setInterval(checkTimeLimit, 1000);
+
+// logic for the timer in the right corner
+function checkTimeLimit() {
+    const elapsedTime = Date.now() - startTime;
+    const remainingTime = timeLimit - elapsedTime;
+
+    // update timer
+    time.innerText = formatTime(remainingTime);
+
+    if (remainingTime <= 0) {
+        clearInterval(timerInterval); // stop countdown
+    }
+}
 
 // function to format the time
-function formatTime(miliseconds) {
-  const totalSeconds = Math.ceil(miliseconds / 1000);
+function formatTime(milliseconds) {
+  const totalSeconds = Math.ceil(milliseconds / 1000);
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = Math.floor(totalSeconds % 60);
   return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
-// check if time limit has been reached
-function checkTimeLimit() {
-  const elapsedTime = Date.now() - startTime;
-  const remainingTime = timeLimit - elapsedTime;
-  
-  // update timer
-  time.innerText = formatTime(remainingTime);
-
-  if (remainingTime <= 0 ) {
-    clearInterval(timerInterval); // stop countdown
- //   window.location.href = "results.html";
-  }
-}
+// run a timeout before results displayed
+setTimeout(() => {
+    result.classList.toggle('hidden');
+    console.log("Results have posted.");
+}, timeLimit);
 
 checkTimeLimit();
-
-const timerInterval = setInterval(checkTimeLimit, 1000);

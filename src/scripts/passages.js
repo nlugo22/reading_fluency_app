@@ -1,12 +1,12 @@
 // passages to be displayed
 const passages = [
   {
-    text: 'The dog <span id="word"></span> to the park.',
+    text: 'The dog <span id="word">ran</span> to the park.',
     correct: "ran",
     choices: ["ran", "jumped", "swam"],
   },
   {
-    text: 'Peter Piper <span id="word"></span> a peck of pickled peppers.',
+    text: 'Peter Piper <span id="word">picked</span> a peck of pickled peppers.',
     correct: "picked",
     choices: ["picked", "climbed", "created"],
   },

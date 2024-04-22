@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    image: node
+    ports:
+      - "8080:8080"
+    volumes:
+      - /Users/nlugo/Projects/JavaScript/reading_fluency_app:/app
+    environment:

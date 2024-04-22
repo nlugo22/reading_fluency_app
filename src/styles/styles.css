@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 
-.passages {
+.passages, .results {
     text-align: center;
     background-color: white;
     max-width: 500px;
@@ -17,4 +17,8 @@ body {
   right: 10px; /* Adjust right distance as needed */
   color: white;
   font-size: 16px;
+}
+
+.hidden {
+    display: none;
 }
